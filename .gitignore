@@ -1,0 +1,12 @@
+
+# cache
+*__pycache__*
+
+
+# credentials
+*credentials.json*
+*token.pickle*
+
+
+# other files
+*-info*
