@@ -49,3 +49,5 @@ received_values = service.read(SHEET_ID, READ_RANGE) # Read values from the shee
 print(received_values)
 
 ```
+
+When you run this program for the first time, your web browser will open so you can authenticate into your google account. After authenticating, a `tocken.pickle` file will be created in the location you chose. The next time you run the program you won't need to authenticate again unless you erase the token.pickle
