@@ -25,7 +25,7 @@ SheetsProject
     |- project.py 
 ```
 
-Create a connection to the Google Sheets API, you will need the ID of the sheet that you will be using
+Create a connection to the Google Sheets API, you will need the ID of the sheet that you will be using \
 [How to find the sheet ID](https://developers.google.com/sheets/api/guides/concepts#spreadsheet_id)
 
 ```python
