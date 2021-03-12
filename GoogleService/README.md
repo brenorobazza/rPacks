@@ -1,5 +1,5 @@
 # Setup
-1. After clonning the repo, access the `GoogleService` Folder
+1. After cloning the repo, access the `GoogleService` Folder
     ```bash
     cd rPacks/GoogleService/
     ```
