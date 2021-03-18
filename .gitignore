@@ -1,11 +1,12 @@
+# folders
 
 # cache
 *__pycache__*
 
 
 # credentials
-*credentials.json*
-*token.pickle*
+*credentials*
+*token*
 
 
 # other files

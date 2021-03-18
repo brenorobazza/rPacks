@@ -13,7 +13,7 @@ setup(
     license = "BSD",
     keywords = "Google",
     url = "",
-    packages=['GoogleSheets'],
+    packages=['GoogleSheets', 'Gmail'],
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
