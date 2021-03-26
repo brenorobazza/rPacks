@@ -1,4 +1,5 @@
 # folders
+TemplatePack/
 
 # cache
 *__pycache__*
@@ -7,7 +8,6 @@
 # credentials
 *credentials*
 *token*
-
 
 # other files
 *-info*
