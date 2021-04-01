@@ -15,8 +15,11 @@ class Regression:
         self.data = pd.read_csv(file, sep=separator)
         self.x_axis = x_axis
         self.y_axis = y_axis
-
-        X = self.fixDecimal(self.data[x_axis].values)
+        
+        try:
+            X = self.fixDecimal(self.data[x_axis].values)
+        except:
+            raise Exception("Ocorreu um erro, talvez tenha utilizado o separador errado\nSeparador utilizado: '%s'\n Regression(arquivo, eixo x, eixo y, <separator=',|;'>)" % separator)
         m = len(X)
         self.X = X.reshape((m,1))
         self.Y = self.fixDecimal(self.data[y_axis].values)
