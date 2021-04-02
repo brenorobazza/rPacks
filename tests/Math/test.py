@@ -1,5 +1,10 @@
-from LinearRegression.Regression import Regression
+from Regressions import Regressions
 
-reg = Regression('test.csv', 'X', 'Y', separator=',')
+linReg = Regressions.Linear('test.csv', 'X', 'Y')
+polReg = Regressions.Polinomial('test.csv', 'X', 'Y', order=2)
 
-reg.plot('resultado')
+print(linReg.r_squared)
+print(polReg.r_squared)
+print(polReg.predict(10))
+print(linReg.predict(10))
+

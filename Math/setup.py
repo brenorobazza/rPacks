@@ -9,11 +9,11 @@ setup(
     version = "0.0.1",
     author = "Breno Robazza",
     author_email = "breno.robazza@hotmail.com",
-    description = ("My math package"),
+    description = ("Regressions package"),
     license = "BSD",
     keywords = "Math",
     url = "",
-    packages=['LinearRegression'],
+    packages=['Regressions'],
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
