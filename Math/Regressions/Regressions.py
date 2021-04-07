@@ -44,6 +44,13 @@ class Polinomial:
             return self.model(x)
         except Exception as e:
             raise e
+    
+    def plot(self, filename='plot'):
+        plt.clf()
+        plt.scatter(self.x,self.y)
+        plt.plot(self.x, self.predict(self.x), label="Accuracy = %.2f%%" %(self.r_squared * 100))
+        plt.legend()
+        plt.savefig(filename)
 
 
 class Linear:
@@ -93,6 +100,14 @@ class Linear:
             return self.model.predict([[x]])
         except:
             raise Exception('Precisa ser um valor único ou uma array bidimensional [[a], [b], [c], ...]')
+    
+    def plot(self, filename='plot'):
+        plt.clf()
+        plt.scatter(self.x,self.y)
+        plt.plot(self.x, self.predict(self.x), label="Accuracy = %.2f%%" % (self.r_squared * 100))
+        plt.legend()
+        plt.savefig(filename)
+
 
         
     

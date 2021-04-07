@@ -8,3 +8,6 @@ print(polReg.r_squared)
 print(polReg.predict(10))
 print(linReg.predict(10))
 
+linReg.plot('linear')
+polReg.plot('polinomial')
+
