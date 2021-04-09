@@ -38,6 +38,10 @@ class DatabaseConnection:
             return sql_file.read()
 
     def execute(self, query):
-        cursor = self.connection.cursor()
-        cursor.execute(query)
-        return cursor.fetchall()
+        if not isinstance(self.connection, bool):
+            cursor = self.connection.cursor()
+            cursor.execute(query)
+            return cursor.fetchall()
+        else:
+            print("Conexão falhou! self.connection =", self.connection)
+            return (None)
