@@ -11,9 +11,12 @@ from oauth2client.service_account import ServiceAccountCredentials
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 class GoogleSheetsService:
+
+    
     def __init__(self, credentials_path, token_path):
         self.connection = self.connect(credentials_path, token_path)
-    
+
+
     def connect(self, credentials_path='./credentials.json', token_path='./token.pickle'):
         creds = None
         if os.path.exists(token_path):
@@ -35,6 +38,7 @@ class GoogleSheetsService:
 
         # Call the Sheets API
         return service.spreadsheets()
+
 
     def read(self, sheetID, range):
         try:
