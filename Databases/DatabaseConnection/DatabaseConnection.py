@@ -1,19 +1,36 @@
 import mysql.connector
 import psycopg2
 import datetime
+import enum
+
+class Databases(enum.Enum):
+    mySQL = 'mySQL'
+    postgreSQL = 'postgreSQL'
+
 
 class DatabaseConnection:
     def __init__(self, database, config):
         self.connection = ''
         self.cursor = ''
-        if database == "mySQL":
-            self.connection = self.connectMySQL(config)
-        elif database == "postgreSQL":
+        if database == Databases.mySQL:
+            try:
+                self.connection = self.connectMySQL(config)
+            except:
+                raise Exception('Configuração inválida, tente ')
+        elif database == Databases.postgreSQL:
             self.connection = self.connectPostgres(config)
         else:
-            print("error")
-        pass
+            raise Exception('O banco de dados selecionado não é válido, tente usar Databases.mySQL ou Databases.postgreSQL')
 
+    @staticmethod
+    def create_config(username, password, host, port, database):
+        return {
+            "user": username,
+            "password": password,
+            "host": host,
+            "port": port,
+            "database": database
+        }
 
     def execute(self, query):
         if not isinstance(self.connection, bool):
